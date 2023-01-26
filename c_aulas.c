@@ -152,4 +152,121 @@ int main()
 	
 }
 
-// 
+// WHILE
+
+#include <stdio.h>
+
+int main()
+{
+	int contador = 1;
+	
+	while (contador < 10)
+	{
+		contador = contador + 1; //or ++contador;
+		printf("%i\n", contador);
+		
+	}
+	
+	return 0;
+}
+
+// DO WHILE
+
+#include <stdio.h>
+
+int main()
+{
+	int i = 0;
+	
+	while(i != 0)
+	{
+		printf("Teste\n");
+	}
+	// usando o "do" pelo menos uma vez sera executado a acao
+	//"while" verifica a condicao antes de executar
+	do{
+		printf("teste\n");
+	}while(i != 0);
+	
+	
+	return 0;
+}
+
+// ELSE IF
+
+#include <stdio.h>
+
+int main()
+{
+	int idade;
+	printf("Digite a sua idade: ");
+	scanf("%i", &idade);
+	
+	if (idade <= 5)
+	{
+		printf("Bebe\n");
+	}
+	// "&&" é equivalente ao "or" ou "e"
+	// "else if" é equivalente ao "elif"
+	else if (idade > 5 && idade <=10)
+	{
+		printf("Crianca\n");
+	}
+	
+	else if (idade > 10 && idade <=18)
+	{
+		printf("Adolescente\n");
+	}
+	//podemos usar quantos "else if" desejarmos
+	else if (idade > 18 && idade <= 50)
+	{
+		printf("Adulto\n");
+	}
+	// enceramos a estrutura com "else"
+	else
+	{
+		printf("Idoso\n");
+	}
+	
+	
+	return 0;
+	
+}
+
+// SWITCH
+
+#include <stdio.h>
+
+int main()
+{
+	int i;
+	printf("Insira o numero inteiro de 1 a 5: ");
+	scanf("%i", &i);
+	// "switch" é semelhante a if, utilizando o "case"
+	switch (i)
+	{
+		case 1: 
+			printf("Primeiro\n");
+			/// "break" serve para informar onde o programa deve encerrar
+			break;
+		case 2: 
+			printf("Segundo\n");
+			break;
+		case 3: 
+			printf("Teceiro\n");
+			break;
+		case 4: 
+			printf("Quarto\n");
+			break;
+		case 5: 
+			printf("Quinto\n");
+			break;
+			//"default" define a acao padrao caso o usuario nao digite nada
+		default:
+			printf("Opcao invalida!");
+			break;
+	}
+		
+	return 0;
+}
+
