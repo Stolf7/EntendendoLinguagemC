@@ -152,7 +152,7 @@ int main()
 	
 }
 
-// WHILE
+// Conceito 10 // WHILE
 
 #include <stdio.h>
 
@@ -170,7 +170,7 @@ int main()
 	return 0;
 }
 
-// DO WHILE
+// Conceito 11 // DO WHILE
 
 #include <stdio.h>
 
@@ -192,7 +192,7 @@ int main()
 	return 0;
 }
 
-// ELSE IF
+// Conceito 12 //  ELSE IF
 
 #include <stdio.h>
 
@@ -233,7 +233,7 @@ int main()
 	
 }
 
-// SWITCH
+// Conceito 13 // SWITCH
 
 #include <stdio.h>
 
