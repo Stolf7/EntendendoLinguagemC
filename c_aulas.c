@@ -65,6 +65,20 @@ int main()
 	
 	return 0;
 }
+// TIPOS DE VARIAVEIS
+
+	char letra = 'a' ou 1; // armazena 1 caractere
+	
+	int numero = 1; // armazena um numero inteiro
+	long int numero = 11111111111; // armazena mais bits
+	const int numero = 1; // "const" fixa o numero
+	
+	float numero = 1.5; // armazena um numero picado
+	double numero = 1.11111111111; // possui mais precisao que "float"
+	const float numero = 1; // "const" fixa o numero
+	
+	bool x = True; // False
+	// nao é escaneavel
 
 // Conceito 6 // operacoes matematicas
 
