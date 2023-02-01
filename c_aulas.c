@@ -270,3 +270,89 @@ int main()
 	return 0;
 }
 
+// CONCEITO 14 ? -> INTERROGACAO // 
+
+#include <stdio.h>
+
+int main()
+{
+	
+	int numero1 = 1;
+	int numero2 = 2;
+	 // estrutura de comparacao 
+	 //sintaxe 
+	 // comparacao ? caso verdadeiro : caso falso;
+	numero1 > numero2 ? printf("Yes") : printf("Not");
+	
+	return 0;
+	
+}
+
+// CONCEITO 15 VETORES
+
+// vetor 
+
+#include <stdio.h>
+// "void" e () são a mesma coisa, = a vazio
+int main(void)
+{
+	
+	int nota[5];
+	
+	nota[0] = 10;
+	nota[1] = 9;
+	nota[2] = 7;
+	nota[3] = 2;
+	nota[4] = 8;	
+	
+	printf("Nota %i", nota[2]);
+	return 0;
+}
+
+// ---------------------------------------------------
+//  EXIBINDO E ARMAZENANDO VETORES
+#include <stdio.h>
+
+int main(void)
+{
+	// "{}" adiciona valores para o vetor
+	int vetor[10] = {10,9,8,7,6,5,4,3,2,1};
+	// loop para imprimir todos os vetores
+	for(int i = 0; i < 10; i++)
+	{// "i" assume o papel de "vetor [x]"
+		printf("\n%i", vetor[i]);
+	}
+	return 0;
+}
+
+// ---------------------------------------------------
+// EX VETOR // ARMAZENANDO DADOS COM LOOP
+#include <stdio.h>
+
+int main()
+{
+	float notas[5] = {0};
+	float total = 0;
+	float media = 0;
+	
+	printf("Insira suas 5 notas: ");
+	for(int i = 0; i < 5; i++)
+	{
+		// note que scanf esta armazenando em notas [i]
+		scanf("%f", &notas[i]);
+	}
+	
+		for(int i = 0; i < 5; i++)
+		{
+			total += notas[i];
+		}
+	
+	media = total / 5;
+	
+	printf("A media do aluno e': %f", media);
+	
+	
+	return 0;
+}
+
+
