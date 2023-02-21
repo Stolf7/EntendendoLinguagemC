@@ -411,5 +411,24 @@ int main(void){
 	}
 } 
 
-// 
+// FUNCAO 1 - DECLARAR E CHAMAR
+
+#include <stdio.h>
+
+int main(void){
+	
+	char letra = 'a';
+	void imprimaMensagem(void); // declarando funcao
+								// funcoes devem ser declaradas por convencao, porem se estiver acima do main funciona
+	imprimaMensagem(); // chama a funcao
+	printf("%c", letra);
+	
+} 
+
+void imprimaMensagem(void){
+	
+	printf("Temos nessa funcao a letra: \n");
+}
+
+// FUNCAO 2 - 
 
