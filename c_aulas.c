@@ -430,5 +430,34 @@ void imprimaMensagem(void){
 	printf("Temos nessa funcao a letra: \n");
 }
 
-// FUNCAO 2 - 
+// FUNCAO 2 - UTILIZANDO FUNCOES
+
+#include <stdio.h>
+
+int main(void){
+	
+	float base, altura;
+	float calcularAreaRetangulo (float base, float altura);
+	float area = calcularAreaRetangulo(base, altura);
+	
+	printf("O valor da area eh: %f", area);
+	
+	return 0;
+}
+// float é o que nossa funcao retorna
+// (float x, float y) é o que nossa funcao recebe
+float calcularAreaRetangulo (float base, float altura){
+	
+	printf("Digite o valor da base: ");
+	scanf("%f", &base);
+	
+	printf("Digite o valor da altura: ");
+	scanf("%f", &altura);
+	
+	float area = base * altura;
+	
+	return area;
+}
+
+//
 
