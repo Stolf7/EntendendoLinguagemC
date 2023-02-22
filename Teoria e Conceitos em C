@@ -459,5 +459,93 @@ float calcularAreaRetangulo (float base, float altura){
 	return area;
 }
 
-//
+// UTILIZANDO VARIAVEIS - VARIAVEL LOCAL AUTOMATICA
+
+#include <stdio.h>
+
+int main(void){
+	
+	void teste(void);
+	
+	teste();
+	teste();				// variavel sempre tera valor de 4,
+							// pois é uma variavel local automatica
+	return 0;				//é uma variavel que esta dentro de uma função
+}							//sempre que roda ela é recriaada
+
+void teste(void){
+	
+	int variavelLocalAutomatica = 2;
+	variavelLocalAutomatica = variavelLocalAutomatica * 2;
+	
+	printf("%i\n", variavelLocalAutomatica);
+}
+
+// UTILIZANDO VARIAVEIS - VARIAVEL LOCAL ESTATICA (static)
+
+#include <stdio.h>
+
+int main(void){
+	
+	void teste(void);
+	
+	teste();
+	teste();	
+	teste();		
+							
+	return 0;				
+}							
+
+void teste(void){
+	
+	int variavelLocalAutomatica = 2;
+	variavelLocalAutomatica = variavelLocalAutomatica * 2;
+	
+	static int variaveLocalEstatica = 2; // nao é recriada sempre que o programa roda
+	variaveLocalEstatica = variaveLocalEstatica * 2;
+	
+	printf("%i\n", variavelLocalAutomatica);
+	printf("%i\n", variaveLocalEstatica);
+}
+
+// VARIAVEL GLOBAL
+
+#include <stdio.h>
+// as variavies globais ficam fora das funcoes
+//visivel para outras funcoes
+//se comporta como a variavel estatica
+
+int gVariavelGlobal = 2;
+int main(void){
+	
+	void teste(void);
+	
+	printf("Global: %i\n", gVariavelGlobal);
+	
+	teste();
+	teste();	
+	teste();		
+							
+	return 0;				
+}							
+
+void teste(void){
+	
+	int variavelLocalAutomatica = 2;
+	variavelLocalAutomatica = variavelLocalAutomatica * 2;
+	
+	static int variaveLocalEstatica = 2; // nao é recriada sempre que o programa roda
+	variaveLocalEstatica = variaveLocalEstatica * 2;
+	
+	printf("%i\n", variavelLocalAutomatica);
+	printf("%i\n", variaveLocalEstatica);
+	
+	gVariavelGlobal *= 2; // se comporta como estatica
+	
+	printf("Global: %i\n", gVariavelGlobal);
+}
+
+// 
+
+
 
