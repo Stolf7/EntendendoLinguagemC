@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main(){
+	
+	float numero1, numero2;
+	char operador;
+	printf("-------------------------\n");
+	printf("-------CALCULADORA-------\n");
+	printf("-------------------------\n");
+	printf("Digite dois numeros e escolha um operador matematico");
+	printf("Soma - (+)\nSubtracao - (-)\nDivisao - (/)\nMultiplicacao - (*)\n\n\n");
+	
+	printf("Digite um numero: \n");
+	scanf("%f", &numero1);
+	printf("Digite a operacao desejada: \n");
+	scanf(" %c", &operador);
+	printf("Digite um numero: \n");
+	scanf("%f", &numero2);
+	
+	if (operador == '+'){
+		printf("Resultado: %f", numero1 + numero2);
+	}
+	else if (operador == '-'){
+		printf("Resultado: %f", numero1 - numero2);
+	}
+	else if (operador == '*'){
+		printf("Resultado: %f", numero1 * numero2);
+	}
+	else if (operador == '/'){
+		printf("Resultado: %f", numero1 / numero2);
+	}
+	else{
+		printf("Operacao invalida.");
+	}
+	
+	return 0;
+}
