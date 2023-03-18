@@ -61,3 +61,70 @@ int somar(int x, int y){// necessario declarar int duas vezes, informando o que 
 	
 	return(x+y); // RETORNA A SOMA DE X E Y
 }
+
+-- 
+
+FUNÇÕES QUE CONVERSAM ENTRE SÍ
+
+
+#include <stdio.h>
+
+float somar(float x, float y); // declarar função, declarar no cabeçalho
+float quadrado(float resultado);
+
+int main(){	
+	
+	float x = 2;
+	float y = 3;
+	float resultado;
+	
+	resultado = somar(x,y);
+	
+	printf("Soma eh: %f\n", resultado);
+	printf("O quadrado eh: %f\n", quadrado(resultado));
+	
+	return 0;
+}
+
+float somar(float x, float y){// necessario declarar int duas vezes, informando o que chega
+	
+	return(x+y);
+}
+
+float quadrado(float resultado) {
+	
+	return(resultado*resultado);
+}
+
+
+-- VARIACAO PARA ENTENDER O EXERCICIO DE CIMA
+
+#include <stdio.h>
+
+float somar(float x, float y); // declarar função, declarar no cabeçalho
+float quadrado(float resultado);
+
+int main(){	
+	
+	float x = 2;
+	float y = 3;
+	float resultado, resultado2;
+	
+	resultado = somar(x,y);
+	resultado2 = quadrado(resultado);
+	
+	printf("Soma eh: %f\n", resultado);
+	printf("O quadrado eh: %f\n", resultado2);
+	
+	return 0;
+}
+
+float somar(float x, float y){// necessario declarar int duas vezes, informando o que chega
+	
+	return(x+y);
+}
+
+float quadrado(float resultado) {
+	
+	return(resultado*resultado);
+}
