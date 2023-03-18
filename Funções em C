@@ -1,0 +1,63 @@
+FUNÇÃO SIMPLES
+EX:
+#include <stdio.h>
+
+int main(void){
+	void somar(); // declarar função
+	somar(); // chamar função
+	return 0;
+}
+
+void somar(){
+	int x = 2;
+	int y = 3;
+	printf("A soma de x + y eh igual a: %i", x+y);
+}
+
+--
+
+FUNÇÃO QUE RECEBE PARAMETROS
+
+#include <stdio.h>
+
+void somar(int x, int y); // declarar função,declarar no cabeçalho
+
+int main(){	
+	
+	int x = 2;
+	int y = 3;
+	
+	somar(x,y); // enviamos x e y para  função somar
+	
+	return 0;
+}
+
+void somar(int x, int y){// necessario declarar int duas vezes, informando o que chega
+	printf("A soma de x + y eh igual a: %i", x + y);
+}
+
+--
+
+FUNÇÃO QUE DEVOLVE PARAMETROS 
+
+#include <stdio.h>
+
+int somar(int x, int y); // declarar função, declarar no cabeçalho
+
+int main(){	
+	
+	int x = 2;
+	int y = 3;
+	int resultado;
+	
+	resultado = somar(x,y);
+	
+	printf("Soma eh: %i", resultado);
+	
+	return 0;
+}
+
+int somar(int x, int y){// necessario declarar int duas vezes, informando o que chega
+	
+	return(x+y); // RETORNA A SOMA DE X E Y
+}
