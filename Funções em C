@@ -148,3 +148,76 @@ int minutos() {
 	scanf("%d", &min);
 	return(hora *60+min);
 }
+
+--
+
+ex's
+
+1)Faça um programa em C que calcule a media de um aluno. Utilize uma função média: voia media(). A função deve apresentar a media do aluno
+
+#include <stdio.h>
+void media();
+
+int main() {
+	media();
+	return 0;
+}
+void media() {
+	float nota1, nota2;
+	printf("Digite sua primeira nota: ");
+	scanf("%f", &nota1);
+	
+	printf("Digite sua segunda nota: ");
+	scanf("%f", &nota2);
+	
+	float mediaFinal = (nota1 + nota2) / 2; 
+	
+	printf("A media eh: %.2f", mediaFinal);
+}
+
+2)Faça um programa em C que apresente funções para as quatro operações
+somar, subtrair, multiplicar e dividir
+
+#include <stdio.h>
+float soma(float numero1, float numero2);
+float subtracao(float numero1, float numero2);
+float multiplicacao(float numero1, float numero2);
+float divisao(float numero1, float numero2);
+
+int main() {
+	float numero1, numero2, operacaoSoma, operacaoSubtracao, operacaoMultiplicacao, operacaoDivisao;
+	
+	printf("Digite o primeiro numero: ");
+	scanf("%f", &numero1);
+	
+	printf("Digite o segundo numero: ");
+	scanf("%f", &numero2);
+	
+	operacaoSoma = soma(numero1, numero2);
+	operacaoSubtracao = subtracao(numero1, numero2);
+	operacaoMultiplicacao = multiplicacao(numero1, numero2); 
+	operacaoDivisao = divisao(numero1, numero2);
+	
+	printf("A soma eh: %f\nA subtracao eh: %f\nA multiplicacao eh: %f\nA divisao eh: %f", operacaoSoma, operacaoSubtracao, operacaoMultiplicacao, operacaoDivisao);
+	return 0;
+}
+float soma(float numero1, float numero2) {
+	return (numero1 + numero2);
+}
+float subtracao(float numero1, float numero2){
+	return (numero1 - numero2);
+}
+float multiplicacao(float numero1, float numero2){
+	return (numero1 * numero2);
+}
+float divisao(float numero1, float numero2){
+	return (numero1 / numero2);
+}
+
+
+3)Faça um programa que apresente a função para calcular a área de uma circunferencia. A função deve calcular a area e realizar o retorno para a função principal. area = 3.14*(R.R.)
+
+
+
+4) Faça um programa que apresente a função para calcular o IMC. A função deve retornar o IMC calculado para a função principal
+IMC = peso / (altura * altura)
