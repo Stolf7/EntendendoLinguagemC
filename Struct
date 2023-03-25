@@ -58,3 +58,58 @@ int main() {
 	}
 	
 }
+
+---------------------------------------------------------------------
+
+#include <stdio.h>
+
+struct dvd{
+	char artista[50];
+	char nomeAlbum[50];
+	char estiloMusical[50];
+	char gravadora[50];
+	int ano;
+	float preco;
+}; struct dvd dvd1;
+
+void cadastra() {
+	printf("Artista: \n");
+	scanf("%s", &dvd1.artista);
+	printf("Nome Album: \n");
+	scanf("%s", &dvd1.nomeAlbum);
+	printf("Estilo Musical: \n");
+	scanf("%s", &dvd1.estiloMusical);
+	printf("Gravadora: \n");
+	scanf("%s", &dvd1.gravadora);
+	printf("Ano: \n");
+	scanf("%i", &dvd1.ano);
+	printf("Preco: \n");
+	scanf("%f", &dvd1.preco);
+}
+
+void imprimir() {
+	printf("\nArtista: %s\n", dvd1.artista);
+	printf("Album: %s\n", dvd1.nomeAlbum);
+	printf("Estilo: %s\n", dvd1.estiloMusical);
+	printf("Gravadora: %s\n", dvd1.gravadora);
+	printf("Ano: %i\n", dvd1.ano);
+	printf("Valor: %f\n", dvd1.preco);
+}
+
+int main() {
+	int opcao;
+	while(true) {
+	
+	printf("Menu..\n");
+	printf("(1) Cadastrar\n");
+	printf("(2) Consultar DVD1\n");
+	scanf("%i", &opcao);
+	switch (opcao) {
+		case 1: cadastra();
+				break;
+		case 2: imprimir();
+				break;
+		default: printf("Opcao Invalida");
+		}
+	}
+}
