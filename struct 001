@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+struct veiculo{
+	char fabricante[50];
+	char modelo[50];
+	int ano;
+	float preco;
+}; 
+
+struct tipo{
+	char carro[50];
+	char moto[50];
+	char barco[50];
+	struct veiculo veiculo1;
+};
+
+void cadastra(){
+	printf("Fabricante: ");
+	scanf("%s", &veiculo1.fabricante);
+	printf("Modelo: ");
+	scanf("%s", &veiculo1.modelo);
+	printf("Ano: ";
+	scanf("%s", &veiculo1.ano);
+	printf("Valor: ");
+	scanf("%s", &veiculo1.preco);
+	printf("Tipo do Veiculo(Carro, moto, barco): ");
+	scanf("%s", &tipo.veiculo1);
+}
+void imprimir(){
+	printf("Fabricante: %s", &veiculo.fabricante);
+	printf("Modelo: %s", &veiculo.modelo);
+	printf("Ano: %i", &veiculo.ano);
+	printf("Valor: %f", &veiculo.preco);
+	printf("Tipo do Veiculo(Carro, moto, barco): %s", &tipo.veiculo1);
+}
+
+int main(){
+	cadastra();
+	imprimir();
+}
