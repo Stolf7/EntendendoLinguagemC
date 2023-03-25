@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 struct carteira {
 	float dinheiro;
@@ -51,6 +52,7 @@ int main() {
 				break;
 		case 2: exibe();
 				break;
+		case 3: exit(1);
 		default: printf("Invalido");
 		}
 	}
