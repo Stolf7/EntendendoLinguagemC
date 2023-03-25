@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+struct carteira {
+	float dinheiro;
+	int cartaoDebito, cartaoCredito, cartaoPlanoSaude, rg, cpf;	
+	char remedio[30];
+}; struct carteira carteiraMatheus; // declara o nome da nossa estrutura
+
+void cadastra() {
+	printf("Dados da carteira\n");
+	printf("Dinheiro: ");
+	scanf("%f", &carteiraMatheus.dinheiro);
+	printf("Cartão de Débito: ");
+	scanf("%i", &carteiraMatheus.cartaoDebito);
+	printf("Cartão de Crédito: ");
+	scanf("%i", &carteiraMatheus.cartaoCredito);	
+	printf("Cartão Plano de Saude: ");
+	scanf("%i", &carteiraMatheus.cartaoPlanoSaude);	
+	printf("RG: ");
+	scanf("%i", &carteiraMatheus.rg);
+	printf("CPF: ");
+	scanf("%i", &carteiraMatheus.cpf);
+	printf("Nome do remedio: ");
+	scanf("%s", &carteiraMatheus.remedio);
+			
+}
+
+void exibe() {
+	printf("\nDados Cadastrados\n");
+	printf("Dinheiro: %f\n", carteiraMatheus.dinheiro);
+	printf("CPF: %i\n", carteiraMatheus.cpf);
+	printf("RG: %i\n", carteiraMatheus.rg);
+	printf("Cartão Debito: %i\n", carteiraMatheus.cartaoDebito);
+	printf("Cartão Crédito: %i\n", carteiraMatheus.cartaoDebito);
+	printf("Remédio: %s\n", carteiraMatheus.remedio);
+}
+
+int main() {
+	
+	int opcao;
+	
+	while(opcao != 3) {
+	printf("Menu\n");
+	printf("(1) - Cadastrar\n");
+	printf("(2) - Exibir\n");
+	printf("(9) - Para Sair\n");
+	scanf("%i", &opcao);
+	
+	switch(opcao) {
+		case 1: cadastra();
+				break;
+		case 2: exibe();
+				break;
+		default: printf("Invalido");
+		}
+	}
+	
+}
