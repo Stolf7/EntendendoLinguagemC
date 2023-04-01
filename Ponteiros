@@ -1,0 +1,6 @@
+// Ponteiros
+
+// Declarando ponteiros
+// ex: int *x; O ponteiro armazena endereços de memoria 
+// ex: x &z; -> Basicamente ponteiros recebem endereços, podemos endereçar outra variavel nela
+// Então podemos alterar essa variavel z que armazenou o enderço de z, portanto por exemplo *x = 20;
