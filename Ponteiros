@@ -20,3 +20,10 @@ int main() {
 	altera(&x, &y);
 	printf("\nO valor de x: %i e o valor de y: %i", x,y);
 }
+
+-----------
+Função malloc(); -> Reserva espaço na memoria, utilizada em vetores
+sizeof() -> reserva o espaço dinamicamente
+
+ex:
+v = (int*) malloc (10*sizeof(int))
