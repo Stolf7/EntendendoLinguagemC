@@ -4,3 +4,19 @@
 // ex: int *x; O ponteiro armazena endereços de memoria 
 // ex: x &z; -> Basicamente ponteiros recebem endereços, podemos endereçar outra variavel nela
 // Então podemos alterar essa variavel z que armazenou o enderço de z, portanto por exemplo *x = 20;
+
+#include <stdio.h>
+
+void altera(int *px, int *py) {
+	*px = 3;
+	*py = 5;
+}
+
+int main() {
+	int x, y;
+	x = 2;
+	y = 4;
+	printf("O valor de x: %i e o valor de y: %i\n", x,y);
+	altera(&x, &y);
+	printf("\nO valor de x: %i e o valor de y: %i", x,y);
+}
